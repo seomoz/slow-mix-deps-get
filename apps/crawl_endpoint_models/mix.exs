@@ -22,7 +22,6 @@ defmodule Delorean.CrawlEndpointModels.Mixfile do
       :runtime_config,
       :shard_repository,
       {:benchfella, :external, only: :dev},
-      {:crawl_binder, :external},
       {:csv, :external}, # only: :test
     ]
   end

@@ -7,7 +7,6 @@ defmodule DeloreanAPI.Mixfile do
     Delorean.MixCommon.child_project(
       app: :api,
       compilers: [:phoenix] ++ Mix.compilers,
-      per_app_prod_config: Path.expand("config/per_app_prod_config.exs", __DIR__),
       short_deps: short_deps())
   end
 

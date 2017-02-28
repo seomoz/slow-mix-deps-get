@@ -11,16 +11,7 @@ defmodule Delorean.ShardRepository.Mixfile do
 
   # Configuration for the OTP application (see `mix help compile.app`)
   def application do
-    app_settings_for(Mix.env)
-    |> Delorean.MixCommon.child_application()
-  end
-
-  # We don't want the shard repo started automatically in tests.
-  # Every test that needs it is responsible for starting it with
-  # an appropriate temp dir.
-  defp app_settings_for(:test), do: []
-  defp app_settings_for(_) do
-    [mod: {Delorean.ShardRepository, []}]
+    Delorean.MixCommon.child_application()
   end
 
   # Specifies umbrella project deps in short form (see `mix_common.exs`)

@@ -6,7 +6,6 @@ defmodule Delorean.Admin.Mixfile do
   def project do
     Delorean.MixCommon.child_project(
       app: :admin,
-      per_app_prod_config: Path.expand("config/per_app_prod_config.exs", __DIR__),
       short_deps: short_deps())
   end
 
